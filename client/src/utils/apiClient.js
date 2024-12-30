@@ -1,6 +1,7 @@
 import axios from 'axios';
 //import {jwtDecode} from 'jwt-decode';
-import jwt_decode from 'jwt-decode';
+//import jwt_decode from 'jwt-decode';
+const jwt_decode = await import('jwt-decode');
 import { useAdminLoginInfoStore } from '../stores/adminLoginModalStore.js'; // Zustand store to manage login state
 
 const apiClient = axios.create({
