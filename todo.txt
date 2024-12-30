@@ -1,0 +1,150 @@
+0. How to run the code:
+    -> Run the backend:
+        >nodemon app.js
+    -> Then run the 'seedAdmin.js' file using 'npm run seed' command as it is added to "script" in package.json.
+    -> Then run frontend/client-
+        >cd client
+        >npm run dev
+
+1. Backend structure:
+    -> Download MERN_backend_structure from my github
+    -> install node_modules using 'npm install' and run using 'nodemon app.js' for resting purpose
+    -> 'mern-x' is the mongodb database to practice this demo structure
+    -> Rename project
+    -> Change mongodb string in .env file. [just replace 'mern-x' with relatable database name]
+    -> Other demo files and folders will be removed later.
+
+2. mongoose schema models:
+    -> AdminLoginModel.js
+    -> AdminProfileModel.js [not used yet]
+    -> BlogModel.js
+    -> ContactModel.js
+    -> ServiceModel.js
+    -> TeamModel.js
+
+3. Api, controller and service creation:
+    -> AdminLoginService
+        -> Create a file named 'seedAdmin.js' in utility folder. This will create the initial admin.
+        -> Set the initial admin's username, email and pass in .env file as - ADMIN_USERNAME, ADMIN_EMAIL, ADMIN_PASS
+        -> Create service, controller and api route
+        -> Postman:
+            -> Set 'http://localhost:5050/api' as 'BASE_URL' in parent folder and save
+            -> http://localhost:5050/api/AdminLogin
+
+    -> CreateBlogService
+        -> Only admin can create blog posts. so authMiddleware is needed. 
+        -> Use VerifyAccessToken to the api.
+        -> 'author' field is added dynamically so that we can know which admin create this blog.
+        -> After successful AdminLogin, copy the access token and save it to main parent folder's variable.
+           Then use it to Authorization header as "Bearer {{ACCESS_TOKEN}}" to create blog posts.
+
+    -> created other api
+
+/*---------------------------Frontend installation-------------------------*/
+
+01. Vite installation:
+	-> Create a folder named 'client' in the same directory as app.js
+	-> Install vite inside the 'client' folder
+		>npm create vite@latest ./
+	-> To create a 'dist' folder:
+		>npm run build
+
+02. Scaffold react with express: [connect react with express]
+	-> just add this to vite.config.js: [after plugins: [react()],...here]
+		server: {
+			proxy: {
+				'/api/': {
+					target: 'http://localhost:5050'
+				}
+			}
+		}
+
+	-> in app.js [backend]
+		just add below app.use('/api/v1', router) -
+
+		app.use(express.static('client/dist'));
+
+		//add react frontend routing
+		app.get('*', function(req, res){
+    		res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+		});
+
+03. Package installation:
+	-> npm install axios
+	-> npm install bootstrap
+	-> npm install bootstrap-icons
+	-> npm install html-react-parser
+	-> npm install js-cookie
+	-> npm install lottie-react
+	-> npm install react-bootstrap
+	-> npm install react-hot-toast
+	-> npm install react-image-gallery
+	-> npm install react-loading-skeleton
+	-> npm install react-router-dom
+	-> npm install react-star-ratings
+	-> npm install sweetalert2
+	-> npm install zustand
+
+04. Add css and images folders to assets folder.
+
+05. Folders structure inside 'src' folder:
+    -> assets
+	-> components
+	-> pages
+	-> skeletons
+	-> stores
+	-> utilities
+
+06. Files:
+    -> 'pages' folder-
+            HomePage.jsx
+            BlogPage.jsx
+            ServicePage.jsx
+            AboutPage.jsx
+            ContactPage.jsx
+
+07. Import these in main.jsx:
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import 'bootstrap';
+    import './assets/css/main.css';
+    import './assets/css/animate.min.css';
+    import 'bootstrap-icons/font/bootstrap-icons.css';
+    import 'react-loading-skeleton/dist/skeleton.css';
+
+08. Routing set up:
+	-> We will use app.jsx as router. so create in app.jsx: [check if import or not]
+
+    import { BrowserRouter, Route, Routes } from 'react-router-dom';
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<HomePage />}/>
+			</Routes>
+		</BrowserRouter>
+
+09. Create a <Layout></Layout> in 'layout' folder, which will have <Navbar /> and <Footer /> component and there will be children components inside
+    these two. In <Layout /> -
+        return (
+            <div>
+                <AppNavBar />
+                {props.children}
+                <Footer />
+            </div>
+        );
+
+    Then call it to HomePage.jsx as-
+        <Layout>
+        
+        </Layout>
+
+10. In our AppNavbar, nav items wil be palaced in left side, search field and 'dashboard' button will be in right side.
+
+
+/*----------------Store creation---------------*/
+
+11. Create centralizedAxios.js in 'utilities' folder to make api calling easy.
+
+12. Create some stores in 'stores' folder:
+    -> authStore.js
+    -> blogStore.js
+    -> uiStore.js
+13. 

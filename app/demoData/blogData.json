@@ -1,0 +1,38 @@
+[
+    {
+      "title": "Understanding the MERN Stack",
+      "slug": "understanding-mern-stack",
+      "content": "The MERN stack is a popular JavaScript stack used for building full-stack web applications. It consists of MongoDB, Express, React, and Node.js.",
+      "image": "https://example.com/mern.jpg",
+      "status": "published"
+    },
+    {
+      "title": "Why Choose Node.js for Backend Development",
+      "slug": "why-choose-nodejs",
+      "content": "Node.js is a powerful JavaScript runtime built on Chrome's V8 engine. It is fast, scalable, and ideal for building real-time applications.",
+      "image": "https://example.com/nodejs.jpg",
+      "status": "published"
+    },
+    {
+      "title": "Introduction to React Hooks",
+      "slug": "introduction-to-react-hooks",
+      "content": "React Hooks provide a way to use state and other React features without writing a class. They were introduced in React 16.8.",
+      "image": "https://example.com/react-hooks.jpg",
+      "status": "draft"
+    },
+    {
+      "title": "Getting Started with MongoDB",
+      "slug": "getting-started-with-mongodb",
+      "content": "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. It's a great choice for modern web applications.",
+      "image": "https://example.com/mongodb.jpg",
+      "status": "published"
+    },
+    {
+      "title": "Express.js: The Fast Framework for Node.js",
+      "slug": "express-fast-framework",
+      "content": "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+      "image": "https://example.com/express.jpg",
+      "status": "draft"
+    }
+  ]
+  

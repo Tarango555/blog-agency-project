@@ -1,0 +1,120 @@
+/* Base Styles for Modal */
+.modal-dialog {
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .modal-content {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    border-bottom: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .btn-close {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1rem;
+  }
+  
+  .btn-close:hover {
+    opacity: 1;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .form-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Error Message */
+  .text-danger {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Submit Button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #007bff;
+    opacity: 0.7;
+  }
+  
+  /* Modal Backdrop */
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Dashboard Button */
+  button.btn-primary {
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      max-width: 90%;
+      margin: 10vh auto;
+    }
+  
+    .modal-header {
+      font-size: 1.25rem;
+      padding: 0.75rem;
+    }
+  
+    .modal-body {
+      padding: 1rem;
+    }
+  
+    .btn-primary {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <g id="Logo" transform="translate(-10 -10)">
+    <circle id="OuterCircle" cx="50" cy="50" r="40" fill="#3b82f6"/>
+    <circle id="InnerCircle" cx="50" cy="50" r="30" fill="#eff6ff"/>
+    <path id="AbstractShape" d="M60 20 Q75 45 60 70 Q45 45 60 20 Z" fill="#1e3a8a" transform="translate(40 20)"/>
+    <text id="BrandName" x="140" y="75" font-size="32" fill="#334155" font-family="Arial, sans-serif">
+      NewBrand
+    </text>
+  </g>
+</svg>

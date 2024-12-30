@@ -1,0 +1,13 @@
+.testimonials-section {
+    background-color: #f9f9f9;
+  }
+  
+  .testimonial-card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  

@@ -1,0 +1,23 @@
+.team-section h2 {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-card img {
+    border: 3px solid #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .team-card img:hover {
+    border-color: #007bff;
+  }
+  

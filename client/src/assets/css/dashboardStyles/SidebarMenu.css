@@ -1,0 +1,35 @@
+/* Sidebar Menu Styling */
+.sidebar-menu {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #343a40; /* Dark background */
+    padding: 2rem 1rem; /* Space around the menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-menu .nav {
+    width: 100%; /* Ensures the menu items take full width */
+}
+
+.sidebar-menu .nav-item {
+    color: #ffffff; /* White text */
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    padding: 0.75rem 0; /* Adds vertical spacing between items */
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.sidebar-menu .nav-item:hover {
+    background-color: #495057; /* Slightly lighter on hover */
+    cursor: pointer;
+    padding-left: 0.5rem; /* Indent on hover */
+}
+
+.sidebar-menu .bi {
+    font-size: 1.5rem; /* Larger icon size */
+    margin-right: 1rem; /* Space between icon and text */
+}

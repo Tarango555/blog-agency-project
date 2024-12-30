@@ -1,0 +1,50 @@
+1. Creating Main Structure: [Delete this .txt file if not needed]
+    - Create workingFlow.txt file
+    - Install node.js
+    - Add "type": "module" under the "main": "index.js" [This allows us to use modern JavaScript features like "import" and "export" instead of require and module.exports.]
+    - Add packages:
+        1. Express.js:
+            - express: Core framework for building the Node.js backend
+            - express-rate-limit: For rate-limiting requests to your server (security)
+            - helmet: Helps secure Express apps by setting various HTTP headers
+            - cors: Enables Cross-Origin Resource Sharing, especially when your frontend and backend are on different domains
+            - cookie-parser: For handling cookies in requests
+
+        2. MongoDB & Mongoose:
+            - mongoose: ODM (Object Data Modeling) library for MongoDB, making database interactions easier
+            - mongodb: Native MongoDB driver, used when you don’t want to use Mongoose
+
+        3. Authentication & Authorization:
+            - jsonwebtoken (JWT): For creating and verifying JSON Web Tokens (JWTs) for user authentication
+            - bcryptjs or argon2: For password hashing
+            - passport (optional): For more advanced authentication, like OAuth
+
+        4. Validation:
+            - joi or express-validator: For validating incoming data (e.g., request body, params)
+
+        5. Utilities:
+            - dotenv: To manage environment variables in a .env file
+            - nodemailer: For sending emails (e.g., verification emails, password resets)
+            - multer: For handling file uploads
+            - uuid: For generating unique IDs
+
+        6. Error Handling & Logging:
+            - winston or morgan: For logging errors and requests
+            - http-errors: To handle HTTP-specific error creation
+
+        7. Development Tools:
+            - nodemon: For automatically restarting the server when files change during development
+            - concurrently: To run both the frontend and backend simultaneously with one command
+            - jest or mocha/chai: For unit testing and integration testing
+
+        8. Security:
+            - express-mongo-sanitize: Prevents MongoDB operator injection
+            - xss-clean: To sanitize user input from XSS attacks
+            - hpp: Prevent HTTP parameter pollution
+    - Folders and Files
+
+2. How to use:
+    -> Download MERN_backend_structure from my github
+    -> install node_modules using 'npm install' and run using 'nodemon app.js' for resting purpose
+    -> 'mern-x' is the mongodb database to practice this demo structure
+    -> Open postman and give the data according to StudentProfilesModel.js

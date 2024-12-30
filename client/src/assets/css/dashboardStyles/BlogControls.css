@@ -1,0 +1,42 @@
+.blog-controls {
+    background-color: #fff;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Search Field */
+  .blog-search {
+    width: 250px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .blog-search:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+  }
+  
+  /* Filter Dropdown */
+  .blog-filter {
+    border-radius: 8px;
+    width: 150px;
+  }
+  
+  /* Add New Button */
+  .blog-add-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .blog-add-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
