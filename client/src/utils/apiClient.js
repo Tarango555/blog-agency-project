@@ -1,7 +1,6 @@
 import axios from 'axios';
-//import {jwtDecode} from 'jwt-decode';
-//import jwt_decode from 'jwt-decode';
-const jwt_decode = await import('jwt-decode');
+import {jwtDecode} from 'jwt-decode';
+
 import { useAdminLoginInfoStore } from '../stores/adminLoginModalStore.js'; // Zustand store to manage login state
 
 const apiClient = axios.create({
@@ -13,7 +12,7 @@ const apiClient = axios.create({
 export const checkTokenExpiry = (token) => {
   try {
     //const { exp } = jwtDecode(token); // Decode and extract expiration
-    const { exp } = jwt_decode(token); // Decode and extract expiration
+    const { exp } = jwtDecode(token); // Decode and extract expiration
     const expiryTime = exp * 1000; // Convert expiry to milliseconds
     return Date.now() >= expiryTime; // Check if token is expired
   } catch (error) {
